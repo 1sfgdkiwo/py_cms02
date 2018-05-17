@@ -1,0 +1,44 @@
+{% extends "base-layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+        <h2>{{ CONTENTS|safe }}</h2>
+        <!--{{ isinya }}-->
+
+</div>
+
+<div class="row">
+
+        <div class="col-lg-8">
+           {% for isi in isinya %}
+             <div class="col-lg-4">
+                 <img style="height:110px;" class="img-responsive img-rounded center-block  " src="/static/upload/{{ isi.feature_image.path }}"/>
+                 <div class="page-header judul_artikel">
+                    <h4>{{ isi.title  }}</h4>
+                 </div>
+                <div class="kolom_artikel">
+                <p>{{ isi.contents | safe }}</p>
+                </div>
+              <p><a class="btn btn-default" href="{{ isi.url  }}">View details </a></p>
+              </div>
+
+           {% endfor %}
+        </div>
+
+
+
+
+
+
+
+
+        <div class="col-lg-4">
+            <h3>Artikel Terbaru</h3>
+          {% for isi in isinya %}
+          <a class="btn btn-default" href="{{ isi.url  }}"><h5>{{ isi.title  }}</h5> </a>
+          {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}

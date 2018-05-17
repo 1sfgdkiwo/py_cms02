@@ -1,0 +1,11 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block tail %}
+    {{ super() }}
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.0.1/ckeditor.js"></script>
+<!--
+     <script src="{{url_for('static',filename='js/ckeditor.js') }}"></script>
+-->
+
+{% endblock %}

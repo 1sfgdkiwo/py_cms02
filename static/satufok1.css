@@ -1,0 +1,19 @@
+
+
+.kolom_artikel{
+    height:195px;
+    overflow:hidden;
+    border: 1px solid #bcb1d5;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+.font_artikel{
+    font-size:11px;
+}
+
+.judul_artikel{
+    height:42px;
+
+}

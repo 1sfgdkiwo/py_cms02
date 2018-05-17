@@ -1,0 +1,44 @@
+{% extends "base-layout.html" %}
+<!--html_doc = """-->
+{% block content %}
+<div class="row">
+<div class="col-md-9">
+  <div class="post">
+<img style="height:110px;" class="img-responsive img-rounded center-block  " src="/static/upload/{{ isinya.feature_image.path }}"/>
+    <div class="page-header">
+    <h3>{{ isinya.title|safe }}</h3>
+    </div>
+
+      <p>{{ isinya.contents|safe }}</p>
+      <!--<p><a class="btn btn-primary btn-lg glyphicon glyphicon-envelope" href="#" role="button"></a></p>-->
+
+    <p><a class="btn primary btn-lg glyphicon glyphicon-arrow-left" href="/" role="button"> Home</a></p>
+
+
+   </div>
+</div>
+
+  <div class="col-md-3">
+    <!--<div class="jumbotron font_artikel"></div>-->
+    <nav id="affix-nav" class="sidebar">
+
+        <!--<ul class="list-group">-->
+        <!--{% for isi in isi_semua %}-->
+          <!--<li class="list-group-item">-->
+            <!--<a href="{{ isi.url[5:]  }}"><h5>{{ isi.title  }}</h5> </a>-->
+          <!--</li>-->
+        <!--{% endfor %}-->
+         <!--</ul>-->
+
+        <ul class="list-group">
+            {% for isih3 in bacah3 %}
+            <li class="list-group-item" style="background-color:#ECB157">
+                <h5>{{ isih3.text  }}</h5>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+  </div>
+</div>
+{% endblock %}

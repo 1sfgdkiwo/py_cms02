@@ -1,0 +1,14 @@
+{% extends "base-layout.html" %}
+
+{% block content %}
+
+
+<div class="jumbotron">
+  <h1>{{ Aboutnya.title|safe }}</h1>
+  <p>{{ Aboutnya.contents|safe }}</p>
+  <!--<p><a class="btn btn-primary btn-lg glyphicon glyphicon-envelope" href="#" role="button"></a></p>-->
+  <!--<p><a class="btn btn-danger btn-lg glyphicon glyphicon-envelope" href="#" role="button"></a></p>-->
+</div>
+
+
+{% endblock %}
